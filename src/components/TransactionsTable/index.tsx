@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 
 export function TransactionsTable() {
-  return(
+  return (
     <Container>
       <table>
         <thead>
@@ -12,7 +12,22 @@ export function TransactionsTable() {
             <th>Data</th>
           </tr>
         </thead>
+
+        <tbody>
+          <tr>
+            <td>Desenvolvimento de website</td>
+            <td className="deposit">R$12.000</td>
+            <td>Desenvolvimento</td>
+            <td>08/12/2021</td>
+          </tr>
+          <tr>
+            <td>Aluguel</td>
+            <td className="withdraw">- R$1.100</td>
+            <td>Casa</td>
+            <td>17/12/2021</td>
+          </tr>
+        </tbody>
       </table>
     </Container>
-  )
+  );
 }
