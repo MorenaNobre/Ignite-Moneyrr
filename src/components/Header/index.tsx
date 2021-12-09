@@ -1,7 +1,11 @@
 import faviconLogo from "../../assets/favicon.png";
 import { Container, Content, LogoContainer } from "./styles";
 
-export function Header() {
+interface HeaderProps {
+  onOpenNewTransactionModal: () => void;
+}
+
+export function Header({onOpenNewTransactionModal}: HeaderProps) {
   return (
     <Container>
       <Content>
@@ -9,7 +13,9 @@ export function Header() {
           <img src={faviconLogo} alt="moneyrr logo" />
           <h1>moneyrr</h1>
         </LogoContainer>
-        <button type="button">Nova transação</button>
+        <button type="button" onClick={onOpenNewTransactionModal}>
+          Nova transação
+        </button>
       </Content>
     </Container>
   );
